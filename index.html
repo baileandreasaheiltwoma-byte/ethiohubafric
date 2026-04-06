@@ -739,7 +739,7 @@ function bpi(){
   var ins={
     telebirr:{l:'&#128241; TeleBirr',a:pl.etb+' ETB',s:['Open your TeleBirr app','Select Send Money','Enter number: 0915346985','Enter amount: '+pl.etb+' ETB','Complete the payment','COPY the transaction confirmation code','Paste the code in the next step to verify']},
     ebirr:{l:'&#128179; eBirr',a:pl.etb+' ETB',s:['Open eBirr app','Select Transfer','Enter number: 0915346985','Enter amount: '+pl.etb+' ETB','Complete the payment','Copy the confirmation code','Paste the code in the next step']},
-    mpesa:{l:'&#127472;&#127466; M-Pesa',a:pl.kes+' KES',s:['Open M-Pesa on your Safaricom phone','Go to Lipa na M-Pesa then Buy Goods','Enter Store Number: 689970','Enter amount: '+pl.kes+' KES','Enter your M-Pesa PIN','Copy the M-Pesa transaction code','Paste the code in the next step']},
+    mpesa:{l:'&#127472;&#127466; M-Pesa',a:pl.kes+' KES',s:['Open M-Pesa on your Safaricom phone','Go to Lipa na M-Pesa then Buy Goods','Enter Till Number: 4345510','Enter amount: '+pl.kes+' KES','Enter your M-Pesa PIN','Copy the M-Pesa transaction code','Paste the code in the next step']},
     usdt:{l:'&#8366; USDT BEP-20',a:pl.usdt+' USDT',s:['Open Binance or Trust Wallet','Select Send then USDT','Choose BNB Smart Chain BEP-20 network','WARNING: Do NOT use ERC-20','Send amount: '+pl.usdt+' USDT','Copy the Transaction Hash TxID','Paste the TxID in the next step']}
   };
   var m=ins[smt];
@@ -861,7 +861,7 @@ window.onload=function(){
     G('bs3').style.display='none';G('bs4').style.display='block';
     var lb={telebirr:'TeleBirr Confirmation Code',ebirr:'eBirr Confirmation Code',mpesa:'M-Pesa Transaction Code',usdt:'Transaction Hash TxID'};
     G('txLbl').textContent=lb[smt]||'Transaction Reference';
-    var ph2={telebirr:'TLB20241234XXXX',ebirr:'EBR20241234XXXX',mpesa:'QAX3D2K9X',usdt:'0x1234abcd...'};
+    var ph2={telebirr:'DCL72VZXXX',ebirr:'80154921370',mpesa:'QAX3D2K9X',usdt:'0x1234abcd...'};
     G('txRef').placeholder=ph2[smt]||'Paste your code here';
     G('txErr').style.display='none';
   };
