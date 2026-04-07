@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>EthioHub Africa - Ethiopia Trusted Marketplace</title>
+<meta name="description" content="Buy sell find jobs rent property across Ethiopia. EthioHub Africa is Ethiopia safest classifieds platform."/>
+<meta name="keywords" content="Ethiopia classifieds jobs Addis Ababa Jijiga Ethiopian marketplace EthioHub"/>
+<meta name="google-site-verification" content="google2e8c338cf65f6757"/>
+<meta name="robots" content="index,follow"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#FFF8EB;color:#1a0e00}
+h1,h2,h3{font-family:'Playfair Display',serif}
+.flag{height:4px;background:linear-gradient(90deg,#1a5c1a 0 33%,#D4A017 33% 66%,#C8102E 66% 100%)}
+button{cursor:pointer;font-family:inherit;-webkit-tap-highlight-color:rgba(26,92,26,0.2);touch-action:manipulation}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 20px;border-radius:10px;font-weight:600;font-size:14px;border:none;transition:all .15s;touch-action:manipulation;-webkit-tap-highlight-color:rgba(0,0,0,0.1);user-select:none}
+.btn:active{transform:scale(0.97);opacity:0.9}
+.bg{background:#1a5c1a;color:#fff}.bg:hover,.bg:active{background:#145014}
+.bd{background:#D4A017;color:#1a0e00}.bd:hover,.bd:active{background:#b8890f}
+.bo{background:transparent;color:#1a5c1a;border:2px solid #1a5c1a}.bo:hover,.bo:active{background:#e8f5e8}
+.bw{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.5)}.bw:hover,.bw:active{background:rgba(255,255,255,0.15)}
+.bsm{padding:7px 14px;font-size:13px}
+.bfull{width:100%;justify-content:center}
+.inp{width:100%;padding:10px 14px;border:1.5px solid #d4c4a0;border-radius:10px;font-size:14px;font-family:inherit;outline:none;background:#fff;transition:border .2s}
+.inp:focus{border-color:#1a5c1a;box-shadow:0 0 0 3px rgba(26,92,26,0.1)}
+.sel{width:100%;padding:10px 14px;border:1.5px solid #d4c4a0;border-radius:10px;font-size:14px;font-family:inherit;outline:none;background:#fff;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath fill='%231a5c1a' d='M6 8 0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;cursor:pointer}
+.sel:focus{border-color:#1a5c1a;outline:none}
+.fg{margin-bottom:14px}
+.lbl{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.hint{font-size:11px;color:#7a5c2a;margin-top:4px}
+.ebox{display:none;padding:10px 14px;background:#fff0f0;border:1.5px solid #fca5a5;border-radius:10px;color:#dc2626;font-size:13px;margin-bottom:14px}
+#navbar{position:sticky;top:0;z-index:200;background:rgba(255,248,235,0.97);backdrop-filter:blur(10px);border-bottom:1px solid #e8dcc8}
+.ni{max-width:1280px;margin:0 auto;padding:0 16px;height:60px;display:flex;align-items:center;gap:12px}
+.logo{display:flex;align-items:center;gap:9px;flex-shrink:0;touch-action:manipulation;-webkit-tap-highlight-color:rgba(26,92,26,0.1);cursor:pointer;user-select:none}
+.lb{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#1a5c1a,#0d3a0d);display:flex;align-items:center;justify-content:center}
+.lb span{color:#D4A017;font-weight:800;font-size:12px}
+.lt p:first-child{font-size:15px;font-weight:700;line-height:1}
+.lt p:last-child{font-size:9px;color:#7a5c2a;letter-spacing:2px;text-transform:uppercase}
+.sb{flex:1;max-width:460px}
+.sf{display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:12px;border:1.5px solid #e8dcc8;background:#fff7ee;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba(26,92,26,0.1)}
+.sf:active{border-color:#1a5c1a;background:#f0f9f0}
+.sf span{font-size:13px;color:#a09070}
+.nr{margin-left:auto;display:flex;align-items:center;gap:8px}
+.ib{width:36px;height:36px;border-radius:10px;border:1.5px solid #e8dcc8;background:transparent;display:flex;align-items:center;justify-content:center;font-size:16px;touch-action:manipulation;-webkit-tap-highlight-color:rgba(26,92,26,0.15)}
+.ib:active{border-color:#1a5c1a;background:#e8f5e8}
+.cb{border-top:1px solid #e8dcc8;background:#fffaf2;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cbi{max-width:1280px;margin:0 auto;padding:0 16px;display:flex;gap:2px}
+.cl{display:flex;align-items:center;gap:5px;padding:8px 12px;border-radius:8px;font-size:13px;font-weight:500;color:#4a3a20;white-space:nowrap;background:transparent;border:none;touch-action:manipulation;-webkit-tap-highlight-color:rgba(26,92,26,0.15)}
+.cl:active{background:#e8f5e8;color:#1a5c1a}
+.mm{display:none;padding:12px;border-top:1px solid #e8dcc8;background:#fffaf2}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.pg{display:none}
+.pg.on{display:block}
+.hero{background:linear-gradient(135deg,#0d3a0d,#1a5c1a 50%,#1e3a1e);padding:60px 16px 80px;position:relative;overflow:hidden}
+.hp{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,transparent,transparent 35px,rgba(212,160,23,0.06) 35px,rgba(212,160,23,0.06) 36px)}
+.hgi{max-width:1280px;margin:0 auto;position:relative}
+@keyframes pu{0%,100%{opacity:0.6;transform:scale(1)}50%{opacity:1;transform:scale(1.2)}}
+.dot{width:8px;height:8px;border-radius:50%;background:#4ade80;animation:pu 2s infinite;display:inline-block}
+.hb{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:50px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);margin-bottom:24px}
+.hb span{font-size:13px;color:#c8e6c8;font-weight:500}
+.hero h1{font-size:clamp(1.9rem,5vw,3.4rem);color:#fff;line-height:1.15;margin-bottom:18px;max-width:680px}
+.hero h1 em{color:#D4A017;font-style:normal}
+.hero p{color:#a8d8a8;font-size:clamp(14px,2vw,17px);max-width:500px;margin-bottom:28px;line-height:1.75}
+.hs{display:flex;gap:28px;margin-bottom:32px;flex-wrap:wrap}
+.hst .v{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#D4A017}
+.hst .l{font-size:12px;color:#a8d8a8}
+.hbtn{display:flex;gap:12px;flex-wrap:wrap}
+.sfl{max-width:760px;margin:-28px auto 0;padding:0 16px;position:relative;z-index:10}
+.sbox{background:#fff;border:1.5px solid #e8dcc8;border-radius:16px;box-shadow:0 8px 32px rgba(26,92,26,0.12);padding:12px;display:flex;flex-wrap:wrap;gap:8px}
+.sfd{display:flex;align-items:center;gap:8px;padding:8px 12px;background:#f8f2e6;border-radius:10px}
+.sfd input,.sfd select{flex:1;border:none;background:transparent;font-size:14px;font-family:inherit;outline:none}
+.sfd input::placeholder{color:#a09070}
+.sec{max-width:1280px;margin:0 auto;padding:48px 16px 20px}
+.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.st h2{font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:700}
+.st p{font-size:13px;color:#7a5c2a;margin-top:3px}
+.si{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.cgd{display:grid;grid-template-columns:repeat(auto-fill,minmax(95px,1fr));gap:10px}
+.cc{background:#fff;border:1.5px solid #e8dcc8;border-radius:14px;padding:14px 10px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:7px;touch-action:manipulation;-webkit-tap-highlight-color:rgba(26,92,26,0.15);cursor:pointer;transition:all .15s}
+.cc:active{border-color:#1a5c1a;background:#f0f9f0;transform:scale(0.97)}
+.ci{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px}
+.cn{font-size:11px;font-weight:600}
+.cct{font-size:10px;color:#7a5c2a}
+.agd{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.ac{background:#fff;border:1.5px solid #e8dcc8;border-radius:14px;overflow:hidden;touch-action:manipulation;-webkit-tap-highlight-color:rgba(26,92,26,0.1);cursor:pointer;transition:border .15s}
+.ac:active{border-color:#1a5c1a}
+.aim{width:100%;height:165px;background:linear-gradient(135deg,#e8dcc8,#d4c4a0);display:flex;align-items:center;justify-content:center;font-size:52px;position:relative}
+.abd{padding:12px}
+.att{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:6px;color:#1a0e00;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.apr2{font-size:15px;font-weight:700;color:#1a5c1a;margin-bottom:6px}
+.ane{font-size:13px;color:#7a5c2a;margin-bottom:6px}
+.ame{display:flex;justify-content:space-between;font-size:11px;color:#7a5c2a}
+.bdg{position:absolute;top:8px;left:8px;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700}
+.bfeat{background:#D4A017;color:#1a0e00}
+.bboost{background:#2563eb;color:#fff}
+.bcat{position:absolute;top:8px;right:8px;padding:3px 8px;border-radius:10px;background:rgba(0,0,0,0.5);color:#fff;font-size:10px}
+.jgd{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+.jc{background:#fff;border:1.5px solid #e8dcc8;border-radius:12px;padding:14px;touch-action:manipulation;-webkit-tap-highlight-color:rgba(37,99,235,0.1);cursor:pointer;transition:border .15s}
+.jc:active{border-color:#2563eb}
+.jt{font-size:14px;font-weight:600;margin-bottom:6px}
+.jm{display:flex;gap:12px;font-size:11px;color:#7a5c2a;flex-wrap:wrap}
+.fsec{background:linear-gradient(135deg,#fffbf0,#fff8e8);border-top:1px solid #f0e4c0;border-bottom:1px solid #f0e4c0;padding:40px 0;margin-top:20px}
+.tsec{background:linear-gradient(135deg,#0d3a0d,#1a5c1a);padding:56px 16px}
+.ti{max-width:1280px;margin:0 auto}
+.tcd{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:32px}
+.tc{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:26px;text-align:center}
+.tco{width:54px;height:54px;border-radius:16px;background:#D4A017;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:24px}
+.tc h3{color:#fff;font-weight:700;margin-bottom:8px;font-size:1rem}
+.tc p{color:#a8d8a8;font-size:13px;line-height:1.65}
+.ctasec{max-width:1280px;margin:40px auto;padding:0 16px 40px}
+.ctab{background:linear-gradient(135deg,#1a5c1a,#0d3a0d);border-radius:22px;padding:44px 28px;text-align:center}
+.ctab h2{font-size:clamp(1.5rem,3vw,2.1rem);color:#fff;margin-bottom:10px}
+.ctab p{color:#a8d8a8;font-size:15px;margin-bottom:26px}
+.mw{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.65);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px}
+.mw.on{display:flex}
+.modal{background:#fff;border-radius:20px;padding:28px;width:100%;max-width:420px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.mcl{position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:8px;border:1.5px solid #e8dcc8;background:transparent;display:flex;align-items:center;justify-content:center;font-size:15px;touch-action:manipulation}
+.mcl:active{background:#f0e8d8}
+.mhd{text-align:center;margin-bottom:22px}
+.mhd .ico{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#1a5c1a,#D4A017);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:22px}
+.mhd h2{font-size:1.4rem;font-weight:700}
+.mhd p{font-size:13px;color:#7a5c2a;margin-top:4px}
+.wzs{display:flex;align-items:center;gap:3px;margin-bottom:24px;overflow-x:auto;padding-bottom:4px}
+.sp{display:flex;align-items:center;gap:5px;padding:7px 12px;border-radius:20px;font-size:12px;font-weight:600;white-space:nowrap}
+.sp.dn{background:#c8e8c8;color:#1a5c1a}
+.sp.ac{background:#D4A017;color:#1a0e00}
+.sp.pn{background:#e8dcc8;color:#7a5c2a}
+.ss{flex:1;height:2px;background:#e8dcc8;min-width:6px}
+.wb{background:#fff;border:1.5px solid #e8dcc8;border-radius:18px;padding:22px}
+.wn{display:flex;justify-content:space-between;margin-top:14px}
+.cpg{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+.cpi{border:2px solid #e8dcc8;border-radius:12px;padding:14px 10px;text-align:center;touch-action:manipulation;-webkit-tap-highlight-color:rgba(26,92,26,0.15);cursor:pointer;transition:all .15s}
+.cpi:active,.cpi.on{border-color:#1a5c1a;background:#e8f5e8}
+.cpi .em{font-size:26px;margin-bottom:6px}
+.cpi .nm{font-size:12px;font-weight:600}
+.pdr{border:2px dashed #e8dcc8;border-radius:14px;padding:32px 16px;text-align:center;touch-action:manipulation;cursor:pointer}
+.pdr:active{border-color:#1a5c1a;background:#f0f9f0}
+.pgd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.ptb{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;border:1.5px solid #e8dcc8}
+.ptb img{width:100%;height:100%;object-fit:cover}
+.pdl{position:absolute;top:3px;right:3px;width:18px;height:18px;border-radius:50%;background:#C8102E;color:#fff;border:none;font-size:10px;display:flex;align-items:center;justify-content:center;padding:0;touch-action:manipulation}
+.dgd{display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:start}
+@media(max-width:700px){.dgd{grid-template-columns:1fr}}
+.dc{background:#fff;border:1.5px solid #e8dcc8;border-radius:16px;overflow:hidden;margin-bottom:18px}
+.di{width:100%;height:300px;background:linear-gradient(135deg,#e8dcc8,#d4c4a0);display:flex;align-items:center;justify-content:center;font-size:90px}
+.db{padding:20px}
+.dp{font-size:2rem;font-weight:800;color:#1a5c1a;margin:10px 0}
+.dm{display:flex;flex-wrap:wrap;gap:10px;font-size:13px;color:#7a5c2a;padding:14px 0;border-top:1px solid #f0e8d8;border-bottom:1px solid #f0e8d8;margin:14px 0}
+.sb2{background:#fff;border:1.5px solid #e8dcc8;border-radius:16px;padding:18px;position:sticky;top:80px}
+.sav{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#1a5c1a,#D4A017);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px}
+.stip{background:#fffbf0;border:1px solid #f0e4c0;border-radius:10px;padding:12px;font-size:12px;margin-top:10px}
+.stip strong{color:#92400e}
+.stip ul{color:#a16207;padding-left:14px;margin-top:4px;line-height:1.9}
+.fbr{background:#fff;border:1.5px solid #e8dcc8;border-radius:14px;padding:14px;display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;align-items:flex-end}
+.fg2{display:flex;flex-direction:column;gap:5px}
+.fl{font-size:11px;color:#7a5c2a;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.emp{text-align:center;padding:60px 20px}
+.emp .emo{font-size:64px;margin-bottom:14px}
+.emp h3{font-size:1.2rem;margin-bottom:8px}
+.emp p{color:#7a5c2a;margin-bottom:18px}
+.bp{border:2px solid #e8dcc8;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;margin-bottom:10px;touch-action:manipulation;cursor:pointer;transition:border .15s}
+.bp:active,.bp.on{border-color:#D4A017;background:#fffbf0}
+.pm{border:2px solid #e8dcc8;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;margin-bottom:10px;touch-action:manipulation;cursor:pointer;transition:border .15s}
+.pm:active,.pm.on{border-color:#1a5c1a;background:#e8f5e8}
+.pi{background:#f8f2e6;border-radius:12px;padding:14px;margin-bottom:14px}
+.ps{display:flex;align-items:flex-start;gap:8px;margin-bottom:8px}
+.pn{width:20px;height:20px;border-radius:50%;background:#1a5c1a;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.pcb{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:#fff;border:1px solid #e8dcc8;border-radius:8px;margin:6px 0}
+.cpb{background:transparent;border:1px solid #1a5c1a;color:#1a5c1a;border-radius:6px;padding:3px 10px;font-size:11px;touch-action:manipulation}
+.cpb:active{background:#e8f5e8}
+footer{background:#0a1a0a;color:#c8d8c8;margin-top:40px}
+.fi{max-width:1280px;margin:0 auto;padding:44px 16px 22px}
+.fgd{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:28px;margin-bottom:36px}
+.fbr2{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.flb{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#1a5c1a,#0d3a0d);display:flex;align-items:center;justify-content:center}
+.ftit{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff;line-height:1}
+.fsub{font-size:9px;color:#7a9a7a;letter-spacing:2px;text-transform:uppercase}
+.fdsc{font-size:13px;color:#7a9a7a;line-height:1.7;margin-bottom:14px}
+.fcon span{display:flex;align-items:center;gap:6px;font-size:12px;color:#7a9a7a;margin-bottom:6px}
+.fh{color:#fff;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.fl2{display:block;color:#7a9a7a;font-size:13px;margin-bottom:8px;touch-action:manipulation;cursor:pointer}
+.fl2:active{color:#4ade80}
+.pp{display:flex;align-items:center;gap:6px;padding:8px 10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;font-size:12px;margin-bottom:8px}
+.frgs{padding:22px 0;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:18px}
+.rtgs{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.rtag{padding:5px 12px;border-radius:20px;border:1px solid rgba(255,255,255,0.1);font-size:12px;color:#7a9a7a;touch-action:manipulation;cursor:pointer}
+.rtag:active{border-color:#1a5c1a;color:#4ade80}
+.fbt{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:12px;color:#4a6a4a}
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:#1a5c1a;color:#fff;padding:12px 22px;border-radius:14px;font-size:14px;font-weight:500;z-index:9999;box-shadow:0 4px 20px rgba(0,0,0,0.25);transition:transform .3s;white-space:nowrap;max-width:90vw;text-align:center;pointer-events:none}
+#toast.on{transform:translateX(-50%) translateY(0)}
+@media(max-width:640px){
+  .hm{display:none!important}
+  .sm{display:flex!important}
+  .agd{grid-template-columns:repeat(2,1fr)}
+  .jgd{grid-template-columns:1fr}
+}
+@media(min-width:641px){.sm{display:none!important}}
+</style>
+</head>
+<body>
+<div id="toast"></div>
+<div id="navbar">
+  <div class="flag"></div>
+  <div class="ni">
+    <div class="logo" id="logoBtn"><div class="lb"><span>EH</span></div><div class="lt hm"><p>EthioHub</p><p>Africa</p></div></div>
+    <div class="sb hm"><div class="sf" id="searchBtn"><span>&#128269;</span><span>Search jobs, property, cars...</span></div></div>
+    <div class="nr">
+      <button class="ib" id="darkBtn">&#127769;</button>
+      <button class="btn bo bsm hm" id="signinBtn">Sign In</button>
+      <button class="btn bg bsm" id="postBtn">+ Post Ad</button>
+      <button class="ib sm" id="menuBtn">&#9776;</button>
+    </div>
+  </div>
+  <nav class="cb hm" aria-label="Categories">
+    <div class="cbi">
+      <button class="cl" data-cat="jobs">&#128188; Jobs</button>
+      <button class="cl" data-cat="real-estate">&#127968; Real Estate</button>
+      <button class="cl" data-cat="vehicles">&#128663; Vehicles</button>
+      <button class="cl" data-cat="for-sale">&#127991; For Sale</button>
+      <button class="cl" data-cat="electronics">&#128241; Electronics</button>
+      <button class="cl" data-cat="services">&#128295; Services</button>
+      <button class="cl" data-cat="agriculture">&#127806; Agriculture</button>
+      <button class="cl" data-cat="personals">&#10084;&#65039; Personals</button>
+      <button class="cl" data-cat="community">&#128101; Community</button>
+      <button class="cl" data-cat="education">&#127891; Education</button>
+    </div>
+  </nav>
+  <div class="mm" id="mobMenu">
+    <div class="mg">
+      <button class="cl" data-cat="jobs">&#128188; Jobs</button>
+      <button class="cl" data-cat="real-estate">&#127968; Real Estate</button>
+      <button class="cl" data-cat="vehicles">&#128663; Vehicles</button>
+      <button class="cl" data-cat="for-sale">&#127991; For Sale</button>
+      <button class="cl" data-cat="electronics">&#128241; Electronics</button>
+      <button class="cl" data-cat="services">&#128295; Services</button>
+      <button class="cl" data-cat="agriculture">&#127806; Agriculture</button>
+      <button class="cl" data-cat="community">&#128101; Community</button>
+    </div>
+    <div style="display:flex;gap:8px;padding-top:10px;border-top:1px solid #e8dcc8">
+      <button class="btn bo bfull" id="signinBtn2">Sign In</button>
+      <button class="btn bg bfull" id="regBtn2">Register Free</button>
+    </div>
+  </div>
+</div>
+<main>
+<section id="home" class="pg on">
+  <div class="hero">
+    <div class="hp"></div>
+    <div class="hgi">
+      <div class="hb"><span>&#127466;&#127481;</span><span>Ethiopia's Most Trusted Marketplace</span><span class="dot"></span></div>
+      <h1>Buy. Sell. Find Jobs.<br/><em>Across Ethiopia.</em></h1>
+      <p>Ethiopia's safest classifieds. Post ads in minutes, reach your region, and connect with verified buyers and sellers.</p>
+      <div class="hs">
+        <div class="hst"><div class="v">50K+</div><div class="l">Active Ads</div></div>
+        <div class="hst"><div class="v">14</div><div class="l">Regions</div></div>
+        <div class="hst"><div class="v">100K+</div><div class="l">Users</div></div>
+        <div class="hst"><div class="v">Free</div><div class="l">To Post</div></div>
+      </div>
+      <div class="hbtn">
+        <button class="btn bd" style="padding:13px 28px;font-size:15px" id="heroPostBtn">Post Free Ad &#8594;</button>
+        <button class="btn bw" style="padding:13px 28px;font-size:15px" id="heroBrowseBtn">Browse Ads</button>
+      </div>
+    </div>
+  </div>
+  <div class="sfl">
+    <div class="sbox">
+      <div class="sfd" style="flex:2;min-width:160px"><span>&#128269;</span><input id="hq" placeholder="What are you looking for?"/></div>
+      <div class="sfd" style="width:170px"><span>&#128205;</span>
+        <select id="hr"><option value="">All Ethiopia</option><option>Addis Ababa</option><option>Somali Region</option><option>Oromia</option><option>Amhara</option><option>Tigray</option><option>Afar</option><option>Dire Dawa</option><option>Harari</option><option>Gambela</option></select>
+      </div>
+      <button class="btn bg" id="heroSearchBtn">Search</button>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sh"><div class="st"><h2>Browse by Category</h2><p>Find exactly what you're looking for</p></div><button class="btn bo bsm" id="viewAllBtn">View All &#8594;</button></div>
+    <div class="cgd">
+      <div class="cc" data-cat="jobs"><div class="ci" style="background:linear-gradient(135deg,#2563eb,#1d4ed8)">&#128188;</div><div class="cn">Jobs</div><div class="cct">2.4k+</div></div>
+      <div class="cc" data-cat="real-estate"><div class="ci" style="background:linear-gradient(135deg,#16a34a,#15803d)">&#127968;</div><div class="cn">Real Estate</div><div class="cct">1.8k+</div></div>
+      <div class="cc" data-cat="vehicles"><div class="ci" style="background:linear-gradient(135deg,#d97706,#b45309)">&#128663;</div><div class="cn">Vehicles</div><div class="cct">900+</div></div>
+      <div class="cc" data-cat="for-sale"><div class="ci" style="background:linear-gradient(135deg,#7c3aed,#6d28d9)">&#127991;</div><div class="cn">For Sale</div><div class="cct">5.2k+</div></div>
+      <div class="cc" data-cat="electronics"><div class="ci" style="background:linear-gradient(135deg,#4f46e5,#4338ca)">&#128241;</div><div class="cn">Electronics</div><div class="cct">3.1k+</div></div>
+      <div class="cc" data-cat="services"><div class="ci" style="background:linear-gradient(135deg,#ea580c,#c2410c)">&#128295;</div><div class="cn">Services</div><div class="cct">1.1k+</div></div>
+      <div class="cc" data-cat="agriculture"><div class="ci" style="background:linear-gradient(135deg,#65a30d,#4d7c0f)">&#127806;</div><div class="cn">Agriculture</div><div class="cct">650+</div></div>
+      <div class="cc" data-cat="personals"><div class="ci" style="background:linear-gradient(135deg,#db2777,#be185d)">&#10084;</div><div class="cn">Personals</div><div class="cct">340+</div></div>
+      <div class="cc" data-cat="community"><div class="ci" style="background:linear-gradient(135deg,#0891b2,#0e7490)">&#128101;</div><div class="cn">Community</div><div class="cct">760+</div></div>
+      <div class="cc" data-cat="education"><div class="ci" style="background:linear-gradient(135deg,#0284c7,#0369a1)">&#127891;</div><div class="cn">Education</div><div class="cct">420+</div></div>
+    </div>
+  </div>
+  <div class="fsec">
+    <div class="sec" style="padding-top:0">
+      <div class="sh"><div style="display:flex;align-items:center;gap:12px"><div class="si" style="background:#D4A017">&#9889;</div><div class="st"><h2>Featured Ads</h2><p>Boosted listings</p></div></div><button class="btn bo bsm" id="featAllBtn">See All &#8594;</button></div>
+      <div class="agd" id="featGrid"></div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sh"><div style="display:flex;align-items:center;gap:12px"><div class="si" style="background:#2563eb">&#128188;</div><div class="st"><h2>Latest Jobs</h2><p>Fresh vacancies across Ethiopia</p></div></div><button class="btn bo bsm" style="color:#2563eb;border-color:#2563eb" id="allJobsBtn">All Jobs &#8594;</button></div>
+    <div class="jgd" id="jobsGrid"></div>
+  </div>
+  <div class="sec">
+    <div class="sh"><div class="st"><h2>Latest Ads</h2><p>Fresh listings across all categories</p></div><button class="btn bo bsm" id="latestAllBtn">Browse All &#8594;</button></div>
+    <div class="agd" id="latestGrid"></div>
+  </div>
+  <div class="tsec">
+    <div class="ti">
+      <div style="text-align:center;margin-bottom:8px"><h2 style="font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin-bottom:8px">Why Choose EthioHub?</h2><p style="color:#a8d8a8">Built for Ethiopia. Trusted by Ethiopians.</p></div>
+      <div class="tcd">
+        <div class="tc"><div class="tco">&#128737;</div><h3>Safe &amp; Verified</h3><p>Phone verification required. Report suspicious ads instantly.</p></div>
+        <div class="tc"><div class="tco">&#128200;</div><h3>More Visibility</h3><p>Boost with TeleBirr, eBirr, M-Pesa or USDT. Reach 10x more buyers.</p></div>
+        <div class="tc"><div class="tco">&#11088;</div><h3>Free to Post</h3><p>Posting is completely free. Pay only if you want premium visibility.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="ctasec"><div class="ctab"><h2>Ready to post your first ad?</h2><p>Takes less than 3 minutes. Completely free. &#127466;&#127481;</p><button class="btn bd" style="font-size:16px;padding:14px 36px" id="ctaPostBtn">Post Free Ad Now &#8594;</button></div></div>
+</section>
+<section id="browse" class="pg">
+  <div class="sec">
+    <h1 id="browseTitle" style="font-size:1.7rem;margin-bottom:5px">Browse All Ads</h1>
+    <p id="browseCnt" style="color:#7a5c2a;font-size:13px;margin-bottom:20px"></p>
+    <div class="fbr">
+      <div class="fg2" style="flex:2;min-width:160px"><label class="fl">&#128269; Keyword</label><input class="inp" id="bq" placeholder="Search ads..."/></div>
+      <div class="fg2" style="width:155px"><label class="fl">&#128193; Category</label>
+        <select class="sel" id="bcat">
+          <option value="">All Categories</option>
+          <option value="jobs">Jobs</option><option value="real-estate">Real Estate</option><option value="vehicles">Vehicles</option><option value="for-sale">For Sale</option><option value="electronics">Electronics</option><option value="services">Services</option><option value="agriculture">Agriculture</option><option value="personals">Personals</option><option value="community">Community</option><option value="education">Education</option>
+        </select>
+      </div>
+      <div class="fg2" style="width:175px"><label class="fl">&#128205; Region</label>
+        <select class="sel" id="breg">
+          <option value="">All Regions</option><option>Addis Ababa</option><option>Somali Region</option><option>Oromia</option><option>Amhara</option><option>Tigray</option><option>Afar</option><option>Dire Dawa</option><option>Harari</option><option>Gambela</option>
+        </select>
+      </div>
+      <div style="display:flex;gap:8px;align-items:flex-end"><button class="btn bo bsm" id="clearBtn">Clear &#10005;</button><button class="btn bg bsm" id="browsePostBtn">+ Post Ad</button></div>
+    </div>
+    <div class="agd" id="browseGrid"></div>
+    <div class="emp" id="browseEmpty" style="display:none"><div class="emo">&#128269;</div><h3>No ads found</h3><p>Try different keywords or clear filters</p><button class="btn bo" id="clearBtn2">Clear Filters</button></div>
+  </div>
+</section>
+<section id="post" class="pg">
+  <div style="max-width:660px;margin:0 auto;padding:28px 16px">
+    <h1 style="font-size:1.7rem;margin-bottom:5px">Post Your Ad</h1>
+    <p style="color:#7a5c2a;font-size:13px;margin-bottom:22px">Free to post &#8212; reach thousands of Ethiopians &#127466;&#127481;</p>
+    <div class="wzs">
+      <div class="sp ac" id="sp1">&#128193; Category</div><div class="ss"></div>
+      <div class="sp pn" id="sp2">&#128205; Location</div><div class="ss"></div>
+      <div class="sp pn" id="sp3">&#128221; Details</div><div class="ss"></div>
+      <div class="sp pn" id="sp4">&#128247; Photos</div><div class="ss"></div>
+      <div class="sp pn" id="sp5">&#128222; Contact</div><div class="ss"></div>
+      <div class="sp pn" id="sp6">&#128065; Preview</div>
+    </div>
+    <div class="wb">
+      <div class="ebox" id="wizErr"></div>
+      <div id="ws1">
+        <h2 style="font-size:1.1rem;margin-bottom:5px">Choose a Category</h2>
+        <p style="font-size:13px;color:#7a5c2a;margin-bottom:16px">What are you selling or offering?</p>
+        <div class="cpg" id="catPicker"></div>
+      </div>
+      <div id="ws2" style="display:none">
+        <h2 style="font-size:1.1rem;margin-bottom:5px">Your Location</h2>
+        <p style="font-size:13px;color:#7a5c2a;margin-bottom:16px">Help buyers find you</p>
+        <div class="fg"><label class="lbl">&#128506; Region <span style="color:#C8102E">*</span></label>
+          <select class="sel" id="adReg"><option value="">&#8212; Select Region &#8212;</option><option>Addis Ababa</option><option>Afar</option><option>Amhara</option><option>Benishangul-Gumuz</option><option>Central Ethiopia</option><option>Dire Dawa</option><option>Gambela</option><option>Harari</option><option>Oromia</option><option>Sidama</option><option>Somali Region</option><option>South Ethiopia</option><option>South West Ethiopia</option><option>Tigray</option></select>
+        </div>
+        <div class="fg" id="zoneRow" style="display:none"><label class="lbl">&#127961; Zone / City</label><select class="sel" id="adZone"><option value="">&#8212; Select Zone &#8212;</option></select></div>
+        <div class="fg"><label class="lbl">&#127968; Kebele / Street <span style="font-weight:400;color:#7a5c2a">(optional)</span></label><input class="inp" id="adKeb" placeholder="e.g. Kebele 03, Near the market"/></div>
+      </div>
+      <div id="ws3" style="display:none">
+        <h2 style="font-size:1.1rem;margin-bottom:16px">Ad Details</h2>
+        <div class="fg"><label class="lbl">Title <span style="color:#C8102E">*</span></label><input class="inp" id="adTit" placeholder="e.g. iPhone 15 Pro Max for Sale" maxlength="100"/><div class="hint">Be specific. Good titles get more clicks.</div></div>
+        <div class="fg"><label class="lbl">Description <span style="color:#C8102E">*</span></label><textarea class="inp" id="adDes" rows="5" placeholder="Describe your ad in detail..." style="resize:vertical"></textarea></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div class="fg"><label class="lbl">Price (optional)</label><input class="inp" id="adPri" type="number" placeholder="Leave blank if negotiable"/></div>
+          <div class="fg"><label class="lbl">Currency</label><select class="sel" id="adCur"><option value="ETB">ETB (Birr)</option><option value="USD">USD ($)</option></select></div>
+        </div>
+      </div>
+      <div id="ws4" style="display:none">
+        <h2 style="font-size:1.1rem;margin-bottom:5px">Add Photos</h2>
+        <p style="font-size:13px;color:#7a5c2a;margin-bottom:16px">Up to 8 photos. Ads with photos get 3x more responses.</p>
+        <div class="pdr" id="photoDrop"><div style="font-size:36px;margin-bottom:8px">&#128247;</div><p style="font-weight:600;margin-bottom:4px">Tap to upload photos</p><p style="font-size:12px;color:#7a5c2a">JPG, PNG, WebP</p></div>
+        <input id="photoInp" type="file" accept="image/*" multiple style="display:none"/>
+        <div class="pgd" id="photoGrid"></div>
+        <p style="font-size:12px;color:#7a5c2a;text-align:right;margin-top:8px" id="photoCnt">0/8 photos</p>
+      </div>
+      <div id="ws5" style="display:none">
+        <h2 style="font-size:1.1rem;margin-bottom:5px">Contact Details</h2>
+        <p style="font-size:13px;color:#7a5c2a;margin-bottom:16px">How should buyers reach you?</p>
+        <div class="fg"><label class="lbl">&#127466;&#127481; Phone <span style="color:#C8102E">*</span></label><input class="inp" id="adPho" type="tel" placeholder="0911 234 567 or +251 911 234 567" style="border-color:#D4A017"/><div class="hint">Format: 09XXXXXXXX or +251XXXXXXXXX</div></div>
+        <div class="fg"><label class="lbl">Your Name</label><input class="inp" id="adNam" placeholder="e.g. Abebe Bekele"/></div>
+        <div class="fg"><label class="lbl">Email <span style="font-weight:400;color:#7a5c2a">(optional)</span></label><input class="inp" id="adEml" type="email" placeholder="your@email.com"/></div>
+      </div>
+      <div id="ws6" style="display:none">
+        <h2 style="font-size:1.1rem;margin-bottom:5px">Preview &amp; Publish</h2>
+        <p style="font-size:13px;color:#7a5c2a;margin-bottom:16px">Review your ad before going live</p>
+        <div id="adPreview" style="background:#f8f2e6;border:1.5px solid #e8dcc8;border-radius:14px;padding:18px;margin-bottom:14px"></div>
+        <div style="background:#fffbf0;border:1.5px solid #f0e4c0;border-radius:12px;padding:12px;display:flex;gap:10px;margin-bottom:14px"><span style="font-size:18px">&#9889;</span><div><p style="font-weight:600;font-size:13px;color:#92400e">Want more visibility?</p><p style="font-size:12px;color:#a16207;margin-top:2px">After publishing boost your ad with TeleBirr eBirr M-Pesa or USDT.</p></div></div>
+        <button class="btn bg bfull" style="padding:14px;font-size:15px" id="publishBtn">&#128640; Publish Ad Now</button>
+      </div>
+    </div>
+    <div class="wn">
+      <button class="btn bo" id="prevBtn" style="display:none">&#8592; Back</button>
+      <button class="btn bg" id="nextBtn" style="margin-left:auto">Next &#8594;</button>
+    </div>
+  </div>
+</section>
+<section id="detail" class="pg">
+  <div style="max-width:1100px;margin:0 auto;padding:24px 16px">
+    <button class="btn bo bsm" style="margin-bottom:20px" id="backBtn">&#8592; Back to listings</button>
+    <div id="detailContent"></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="flag"></div>
+  <div class="fi">
+    <div class="fgd">
+      <div>
+        <div class="fbr2"><div class="flb"><span style="color:#D4A017;font-weight:800;font-size:13px">EH</span></div><div><div class="ftit">EthioHub</div><div class="fsub">Africa</div></div></div>
+        <p class="fdsc">Ethiopia's most trusted classifieds. Buy sell find work and connect with your community.</p>
+        <div class="fcon"><span>&#128205; Addis Ababa Ethiopia &#127466;&#127481;</span><span>&#128241; +251 70 191 7732</span><span>&#9993; baileandreasaheiltwoma&#64;gmail&#46;com</span></div>
+      </div>
+      <div>
+        <p class="fh">Browse</p>
+        <span class="fl2" data-cat="jobs">&#128188; Jobs</span>
+        <span class="fl2" data-cat="real-estate">&#127968; Real Estate</span>
+        <span class="fl2" data-cat="vehicles">&#128663; Vehicles</span>
+        <span class="fl2" data-cat="for-sale">&#127991; For Sale</span>
+        <span class="fl2" data-cat="electronics">&#128241; Electronics</span>
+      </div>
+      <div>
+        <p class="fh">Account</p>
+        <span class="fl2" id="footReg">Sign Up Free</span>
+        <span class="fl2" id="footLogin">Sign In</span>
+        <span class="fl2" id="footPost">Post an Ad</span>
+        <span class="fl2" id="footBoost">Boost My Ad &#9889;</span>
+      </div>
+      <div>
+        <p class="fh">Payments</p>
+        <div class="pp">&#128241; TeleBirr</div>
+        <div class="pp">&#128179; eBirr</div>
+        <div class="pp">&#127472;&#127466; M-Pesa Kenya</div>
+        <div class="pp">&#8366; USDT Binance</div>
+      </div>
+    </div>
+    <div class="frgs">
+      <p style="font-size:11px;color:#4a6a4a;text-transform:uppercase;letter-spacing:2px">Popular Regions</p>
+      <div class="rtgs">
+        <span class="rtag" data-reg="Addis Ababa">Addis Ababa</span>
+        <span class="rtag" data-reg="Somali Region">Jijiga Somali</span>
+        <span class="rtag" data-reg="Amhara">Bahir Dar</span>
+        <span class="rtag" data-reg="Tigray">Mekelle</span>
+        <span class="rtag" data-reg="Oromia">Adama</span>
+        <span class="rtag" data-reg="Dire Dawa">Dire Dawa</span>
+        <span class="rtag" data-reg="Harari">Harar</span>
+      </div>
+    </div>
+    <div class="fbt"><span>&#169; 2025 EthioHub Africa. All rights reserved.</span><span>Built with love for Ethiopia &#127466;&#127481;</span></div>
+  </div>
+</footer>
+<div class="mw" id="loginModal">
+  <div class="modal">
+    <button class="mcl" id="closeLogin">&#10005;</button>
+    <div class="flag" style="border-radius:8px 8px 0 0;margin:-28px -28px 22px"></div>
+    <div class="mhd"><div class="ico">&#128272;</div><h2>Welcome Back</h2><p>Sign in to your EthioHub account</p></div>
+    <div class="fg"><label class="lbl">Email Address</label><input class="inp" id="liEmail" type="email" placeholder="you@example.com"/></div>
+    <div class="fg"><label class="lbl">Password</label><input class="inp" id="liPass" type="password" placeholder="Your password"/></div>
+    <button class="btn bg bfull" style="padding:12px;margin-bottom:12px" id="loginSubmit">Sign In &#8594;</button>
+    <p style="text-align:center;font-size:13px;color:#7a5c2a">No account? <span style="color:#1a5c1a;font-weight:600;cursor:pointer" id="toRegister">Register Free</span></p>
+  </div>
+</div>
+<div class="mw" id="regModal">
+  <div class="modal">
+    <button class="mcl" id="closeReg">&#10005;</button>
+    <div class="flag" style="border-radius:8px 8px 0 0;margin:-28px -28px 22px"></div>
+    <div class="mhd"><h2>Create Your Account</h2><p>Join thousands of Ethiopians today</p></div>
+    <div class="fg"><label class="lbl">Full Name</label><input class="inp" id="rgName" placeholder="e.g. Abebe Bekele"/></div>
+    <div class="fg"><label class="lbl">Email Address</label><input class="inp" id="rgEmail" type="email" placeholder="you@example.com"/></div>
+    <div class="fg"><label class="lbl">&#127466;&#127481; Phone <span style="color:#D4A017;font-weight:400;font-size:11px">(required)</span></label><input class="inp" id="rgPhone" type="tel" placeholder="0911 234 567" style="border-color:#D4A017"/></div>
+    <div class="fg"><label class="lbl">Password</label><input class="inp" id="rgPass" type="password" placeholder="Min. 8 characters"/></div>
+    <button class="btn bg bfull" style="padding:12px;margin-bottom:10px" id="regSubmit">Create My Account &#8594;</button>
+    <p style="text-align:center;font-size:13px;color:#7a5c2a">Have an account? <span style="color:#1a5c1a;font-weight:600;cursor:pointer" id="toLogin">Sign In</span></p>
+  </div>
+</div>
+<div class="mw" id="boostModal">
+  <div class="modal" style="max-width:460px">
+    <button class="mcl" id="closeBoost">&#10005;</button>
+    <div style="background:linear-gradient(135deg,#fffbf0,#fff4d0);margin:-28px -28px 20px;padding:18px 22px;border-radius:12px 12px 0 0;border-bottom:1.5px solid #f0e4c0">
+      <h2 style="font-size:1.1rem">&#9889; Boost Your Ad</h2>
+      <p style="font-size:12px;color:#7a5c2a;margin-top:3px" id="boostTitle">Get more visibility</p>
+    </div>
+    <div id="bs1">
+      <p style="font-size:13px;font-weight:600;margin-bottom:12px">Choose a boost plan:</p>
+      <div class="bp on" id="planBasic"><div style="width:40px;height:40px;border-radius:10px;background:#dbeafe;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">&#9889;</div><div style="flex:1"><div style="font-weight:700;font-size:14px">Basic Boost <span style="font-weight:400;font-size:11px;color:#7a5c2a">7 days</span></div><div style="font-size:12px;font-weight:700;color:#D4A017">99 ETB &#183; 250 KES &#183; 1.5 USDT</div><div style="font-size:11px;color:#7a5c2a">Pinned to top &#183; 3x visibility</div></div></div>
+      <div class="bp" id="planFeat"><div style="width:40px;height:40px;border-radius:10px;background:#fef3c7;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">&#11088;</div><div style="flex:1"><div style="font-weight:700;font-size:14px">Featured <span style="font-weight:400;font-size:11px;color:#7a5c2a">14 days</span> <span style="font-size:10px;padding:2px 7px;background:#D4A017;color:#1a0e00;border-radius:8px;font-weight:700">POPULAR</span></div><div style="font-size:12px;font-weight:700;color:#D4A017">199 ETB &#183; 500 KES &#183; 3 USDT</div><div style="font-size:11px;color:#7a5c2a">Homepage spotlight &#183; 10x visibility</div></div></div>
+      <div class="bp" id="planPrem"><div style="width:40px;height:40px;border-radius:10px;background:#f3e8ff;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">&#128081;</div><div style="flex:1"><div style="font-weight:700;font-size:14px">Premium <span style="font-weight:400;font-size:11px;color:#7a5c2a">30 days</span></div><div style="font-size:12px;font-weight:700;color:#D4A017">399 ETB &#183; 1000 KES &#183; 5.5 USDT</div><div style="font-size:11px;color:#7a5c2a">Banner slot &#183; 25x visibility</div></div></div>
+      <button class="btn bd bfull" style="padding:12px;margin-top:12px" id="boostNext1">Continue &#8594;</button>
+    </div>
+    <div id="bs2" style="display:none">
+      <p style="font-size:13px;font-weight:600;margin-bottom:12px">Select payment method:</p>
+      <div class="pm" id="pmTel"><span style="font-size:26px">&#128241;</span><div><div style="font-weight:700;font-size:14px">TeleBirr</div><div style="font-size:12px;color:#7a5c2a">Send to: <strong>0915346985</strong></div></div></div>
+      <div class="pm" id="pmEbi"><span style="font-size:26px">&#128179;</span><div><div style="font-weight:700;font-size:14px">eBirr</div><div style="font-size:12px;color:#7a5c2a">Send to: <strong>0915346985</strong></div></div></div>
+      <div class="pm" id="pmMpe"><span style="font-size:26px">&#127472;&#127466;</span><div><div style="font-weight:700;font-size:14px">M-Pesa Safaricom</div><div style="font-size:12px;color:#7a5c2a">Till Number: <strong>4345510</strong></div></div></div>
+      <div class="pm" id="pmUsd"><span style="font-size:26px">&#8366;</span><div><div style="font-weight:700;font-size:14px">USDT Binance BEP-20</div><div style="font-size:12px;color:#7a5c2a">BNB Smart Chain only</div></div></div>
+      <div style="display:flex;gap:8px;margin-top:12px"><button class="btn bo" style="flex:1;padding:11px" id="boostBack2">&#8592; Back</button><button class="btn bg" style="flex:2;padding:11px" id="boostNext2">Pay Now &#8594;</button></div>
+    </div>
+    <div id="bs3" style="display:none">
+      <div id="payInst"></div>
+      <div style="display:flex;gap:8px;margin-top:12px"><button class="btn bo" style="flex:1;padding:11px" id="boostBack3">&#8592; Back</button><button class="btn bg" style="flex:2;padding:11px" id="boostNext3">I've Paid &#8594;</button></div>
+    </div>
+    <div id="bs4" style="display:none">
+      <div style="text-align:center;margin-bottom:18px"><div style="width:54px;height:54px;border-radius:50%;background:#e8f5e8;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:22px">&#9989;</div><h3 style="font-size:1.05rem">Verify Your Payment</h3><p style="font-size:13px;color:#7a5c2a;margin-top:5px">Paste your transaction code from the receipt</p></div>
+      <div class="fg"><label class="lbl" id="txLbl">Transaction Reference Code</label><input class="inp" id="txRef" placeholder="Paste your code here" style="font-family:monospace;letter-spacing:1px"/><div class="hint">Copy the code from your payment app and paste here. Boost activates automatically.</div></div>
+      <div class="ebox" id="txErr"></div>
+      <div style="display:flex;gap:8px;margin-top:12px"><button class="btn bo" style="flex:1;padding:11px" id="boostBack4">&#8592; Back</button><button class="btn bg" style="flex:2;padding:11px" id="verifyBtn">Activate Boost &#9889;</button></div>
+    </div>
+    <div id="bs5" style="display:none;text-align:center;padding:10px 0">
+      <div style="font-size:54px;margin-bottom:14px">&#127881;</div>
+      <h3 style="font-size:1.3rem;margin-bottom:8px">Boost Activated!</h3>
+      <p style="color:#7a5c2a;font-size:13px;margin-bottom:18px">Your ad is now boosted and will appear at the top!</p>
+      <div style="padding:12px;background:#e8f5e8;border:1.5px solid #c8e8c8;border-radius:12px;margin-bottom:18px;font-size:13px;color:#1a5c1a;font-weight:500">&#9989; Expect significantly more views now!</div>
+      <button class="btn bg bfull" style="padding:12px" id="boostDone">Done</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+var LOCS={'Addis Ababa':['Addis Ketema','Akaky Kaliti','Arada','Bole','Gullele','Kirkos','Kolfe Keranio','Lideta','Nifas Silk-Lafto','Yeka'],'Somali Region':['Fafan Zone','Siti Zone','Jarar Zone','Korahe Zone','Nogob Zone','Dollo Zone','Afder Zone','Liben Zone'],'Oromia':['East Hararghe','West Hararghe','Arsi Zone','Bale Zone','East Shewa','West Shewa','Jimma Zone','Guji Zone'],'Amhara':['Bahir Dar','North Gondar','South Gondar','North Wollo','South Wollo','East Gojjam','West Gojjam'],'Tigray':['Mekelle','Central Tigray','Eastern Tigray','Southern Tigray','Western Tigray'],'Afar':['Zone 1 Awsi','Zone 2 Kilbati','Zone 3 Gabi','Zone 4 Fantana','Zone 5 Hari'],'Harari':['Harar City','Harar Woreda','Babile District'],'Dire Dawa':['Dire Dawa Urban','Dire Dawa Rural'],'Gambela':['Gambela Town','Agnewak Zone','Nuer Zone'],'Benishangul-Gumuz':['Asosa Zone','Metekel Zone','Kamashi Zone'],'Sidama':['Hawassa City','Sidama Zone'],'South Ethiopia':['Wolaita Zone','Konso Zone','Gurage Zone'],'Central Ethiopia':['Silte Zone','Hadiya Zone'],'South West Ethiopia':['Bench Sheko','Dawro Zone']};
+var CATS=[{id:'jobs',l:'Jobs',e:'&#128188;'},{id:'real-estate',l:'Real Estate',e:'&#127968;'},{id:'vehicles',l:'Vehicles',e:'&#128663;'},{id:'for-sale',l:'For Sale',e:'&#127991;'},{id:'electronics',l:'Electronics',e:'&#128241;'},{id:'services',l:'Services',e:'&#128295;'},{id:'agriculture',l:'Agriculture',e:'&#127806;'},{id:'personals',l:'Personals',e:'&#10084;'},{id:'community',l:'Community',e:'&#128101;'},{id:'education',l:'Education',e:'&#127891;'},{id:'fashion',l:'Fashion',e:'&#128255;'},{id:'business',l:'Business',e:'&#127970;'}];
+var PLANS={basic:{n:'Basic Boost',d:7,etb:99,kes:250,usdt:1.5},featured:{n:'Featured',d:14,etb:199,kes:500,usdt:3},premium:{n:'Premium',d:30,etb:399,kes:1000,usdt:5.5}};
+var ADS=[{id:1,t:'Software Developer Wanted - Addis Ababa',c:'jobs',r:'Addis Ababa',p:null,u:'ETB',d:'Looking for skilled React Node.js developer with 3 years experience. Remote work possible. Competitive salary.',ph:'0911234567',n:'Tech Ethiopia PLC',f:1,b:1,e:'&#128188;',dy:2},{id:2,t:'3-Bedroom House for Rent - Bole',c:'real-estate',r:'Addis Ababa',p:25000,u:'ETB',d:'Spacious 3-bedroom house in Bole sub-city. Modern kitchen 2 bathrooms parking. Available immediately.',ph:'0922345678',n:'Selam Properties',f:1,b:0,e:'&#127968;',dy:1},{id:3,t:'Toyota Land Cruiser 2019 - Low Mileage',c:'vehicles',r:'Addis Ababa',p:4200000,u:'ETB',d:'2019 Toyota Land Cruiser V8. Excellent condition. 60000km only. Full service history.',ph:'0933456789',n:'Dawit Auto',f:0,b:1,e:'&#128663;',dy:3},{id:4,t:'iPhone 15 Pro Max 256GB - Brand New',c:'electronics',r:'Addis Ababa',p:165000,u:'ETB',d:'iPhone 15 Pro Max 256GB Natural Titanium. Sealed in original box. All accessories included.',ph:'0944567890',n:'Hana Mobile',f:1,b:1,e:'&#128241;',dy:0},{id:5,t:'Nursing Job - Jijiga Regional Hospital',c:'jobs',r:'Somali Region',p:null,u:'ETB',d:'Jijiga Regional Hospital hiring qualified nurses. Competitive salary housing allowance medical benefits.',ph:'+251701917732',n:'Jijiga Hospital HR',f:0,b:0,e:'&#128137;',dy:1},{id:6,t:'Commercial Land for Sale - Harar Road Jijiga',c:'real-estate',r:'Somali Region',p:800000,u:'ETB',d:'800m commercial land on Harar Road Jijiga. Great location for business. All documents ready.',ph:'+251701917732',n:'Fafan Investments',f:0,b:0,e:'&#127959;',dy:4},{id:7,t:'Bajaj Three-Wheeler - Good Condition',c:'vehicles',r:'Oromia',p:180000,u:'ETB',d:'2021 Bajaj RE three-wheeler taxi. 95000km. Engine recently overhauled. All documents valid.',ph:'0955678901',n:'Adama Motors',f:0,b:0,e:'&#128663;',dy:2},{id:8,t:'General Manager Needed - Bahir Dar',c:'jobs',r:'Amhara',p:null,u:'ETB',d:'Manufacturing company seeking experienced GM. 10 years management experience. Attractive package.',ph:'0966789012',n:'Tana Industries',f:0,b:0,e:'&#128084;',dy:5},{id:9,t:'Samsung Galaxy S24 Ultra - Sealed',c:'electronics',r:'Addis Ababa',p:145000,u:'ETB',d:'Samsung Galaxy S24 Ultra 512GB. Brand new sealed. Titanium Gray. Imported from Dubai.',ph:'0977890123',n:'Galaxy Store ET',f:0,b:0,e:'&#128241;',dy:1},{id:10,t:'English Tutor - Online and In-Person',c:'education',r:'Addis Ababa',p:500,u:'ETB',d:'Experienced English tutor for all levels. IELTS TOEFL preparation. 500 ETB per session.',ph:'0988901234',n:'Tigist Haile',f:0,b:0,e:'&#128218;',dy:3},{id:11,t:'Teff and Wheat - Direct from Farm',c:'agriculture',r:'Amhara',p:3500,u:'ETB',d:'Fresh teff and wheat from Gojjam farms. Bulk orders available. Free delivery for 10 quintals.',ph:'0909012345',n:'Gojjam Harvest',f:0,b:0,e:'&#127806;',dy:2},{id:12,t:'Mobile Car Mechanic - Come to You',c:'services',r:'Addis Ababa',p:500,u:'ETB',d:'Professional mobile mechanic. Engine diagnostics oil change brake service electrical repairs.',ph:'0910123456',n:'Mobile Fix ET',f:0,b:0,e:'&#128295;',dy:0},{id:13,t:'2-Room Apartment - Mekelle City Center',c:'real-estate',r:'Tigray',p:8000,u:'ETB',d:'Clean 2-room apartment in Mekelle. Ground floor. Running water electricity. Near Axum Hotel.',ph:'0921234567',n:'Tigray Realty',f:0,b:0,e:'&#127962;',dy:6},{id:14,t:'NGO Driver Needed - Dire Dawa',c:'jobs',r:'Dire Dawa',p:null,u:'ETB',d:'International NGO hiring experienced driver. Valid license 5 years experience required.',ph:'0932345678',n:'INGO East Africa',f:0,b:0,e:'&#128665;',dy:1},{id:15,t:'MacBook Pro M3 - 14 inch 16GB',c:'electronics',r:'Addis Ababa',p:280000,u:'ETB',d:'MacBook Pro M3 14-inch 16GB RAM 512GB SSD. Space Gray. 6 months old excellent condition.',ph:'0943456789',n:'Apple ET',f:0,b:0,e:'&#128187;',dy:2},{id:16,t:'Traditional Habesha Dress - New',c:'for-sale',r:'Addis Ababa',p:4500,u:'ETB',d:'Beautiful traditional Habesha kemis. White with colored embroidery. Size M. Brand new.',ph:'0954567890',n:'Habesha Fashion',f:0,b:0,e:'&#128255;',dy:3}];
+var cp='home',pp='home',ws=1,sc=null,ph=[],aa=ADS.slice(),spl='basic',smt=null,dk=false,isLoggedIn=false;
+function G(id){return document.getElementById(id);}
+function show(id){var p=G(id);if(p){p.className='pg on';}}
+function hide(id){var p=G(id);if(p){p.className='pg';}}
+function gp(p){
+  pp=cp;
+  ['home','browse','post','detail'].forEach(function(id){id===p?show(id):hide(id);});
+  cp=p;window.scrollTo({top:0,behavior:'smooth'});
+  if(p==='browse')setTimeout(rb,50);
+}
+function toast(msg,col){
+  var t=G('toast');t.textContent=msg;t.style.background=col||'#1a5c1a';
+  t.classList.add('on');setTimeout(function(){t.classList.remove('on');},3200);
+}
+function cl(id){var c=CATS.find(function(x){return x.id===id;});return c?c.e+' '+c.l:id;}
+function ta(d){return d===0?'Today':d===1?'Yesterday':d+'d ago';}
+function ac(a){
+  var b=a.f?'<div class="bdg bfeat">&#11088; Featured</div>':a.b?'<div class="bdg bboost">&#9889; Boosted</div>':'';
+  return '<div class="ac" data-id="'+a.id+'">'
+    +'<div class="aim">'+a.e+b+'<div class="bcat">'+cl(a.c)+'</div></div>'
+    +'<div class="abd"><div class="att">'+a.t+'</div>'
+    +(a.p?'<div class="apr2">'+a.u+' '+a.p.toLocaleString()+'</div>':'<div class="ane">Price negotiable</div>')
+    +'<div class="ame"><span>&#128205; '+a.r+'</span><span>'+ta(a.dy)+'</span></div>'
+    +'</div></div>';
+}
+function jc(a){
+  return '<div class="jc" data-id="'+a.id+'">'
+    +'<div class="jt">'+a.t+'</div>'
+    +'<div class="jm"><span>&#128205; '+a.r+'</span><span>&#128336; '+ta(a.dy)+'</span>'
+    +(a.p?'<span style="color:#1a5c1a;font-weight:700">'+a.u+' '+a.p.toLocaleString()+'</span>':'<span style="color:#2563eb">Negotiable</span>')
+    +'</div></div>';
+}
+function rh(){
+  var f=aa.filter(function(a){return a.f||a.b;}).slice(0,6);
+  var j=aa.filter(function(a){return a.c==='jobs';}).slice(0,6);
+  var l=aa.slice().sort(function(a,b){return a.dy-b.dy;}).slice(0,12);
+  G('featGrid').innerHTML=f.map(ac).join('');
+  G('jobsGrid').innerHTML=j.map(jc).join('');
+  G('latestGrid').innerHTML=l.map(ac).join('');
+}
+function rb(){
+  var q=(G('bq')?G('bq').value:'').toLowerCase();
+  var cat=G('bcat')?G('bcat').value:'';
+  var reg=G('breg')?G('breg').value:'';
+  var fl=aa.filter(function(a){
+    if(q&&a.t.toLowerCase().indexOf(q)<0&&a.d.toLowerCase().indexOf(q)<0)return false;
+    if(cat&&a.c!==cat)return false;
+    if(reg&&a.r.toLowerCase().indexOf(reg.toLowerCase())<0)return false;
+    return true;
+  });
+  fl.sort(function(a,b){return((b.f?2:0)+(b.b?1:0))-((a.f?2:0)+(a.b?1:0))||a.dy-b.dy;});
+  var cat2=G('bcat')?G('bcat').value:'';
+  var ti=cat2?cl(cat2):q?'Results for "'+q+'"':'Browse All Ads';
+  if(G('browseTitle'))G('browseTitle').textContent=ti;
+  if(G('browseCnt'))G('browseCnt').textContent=fl.length.toLocaleString()+' ads found';
+  var g=G('browseGrid'),e=G('browseEmpty');
+  if(!g)return;
+  if(!fl.length){g.style.display='none';e.style.display='block';}
+  else{g.style.display='grid';e.style.display='none';g.innerHTML=fl.map(ac).join('');}
+}
+function sd(id){
+  var a=aa.find(function(x){return x.id===id;});
+  if(!a)return;
+  G('detailContent').innerHTML=
+    '<div class="dgd"><div>'
+    +'<div class="dc"><div class="di">'+a.e+'</div><div class="db">'
+    +(a.f?'<span style="display:inline-block;padding:3px 10px;border-radius:20px;background:#D4A017;color:#1a0e00;font-size:10px;font-weight:700;margin-bottom:8px">&#11088; Featured</span>':'')
+    +(a.b&&!a.f?'<span style="display:inline-block;padding:3px 10px;border-radius:20px;background:#2563eb;color:#fff;font-size:10px;font-weight:700;margin-bottom:8px">&#9889; Boosted</span>':'')
+    +'<h1 style="font-size:1.5rem;margin-bottom:4px">'+a.t+'</h1>'
+    +(a.p?'<div class="dp">'+a.u+' '+a.p.toLocaleString()+'</div>':'<div style="font-size:1rem;color:#7a5c2a;margin:10px 0">Price: Negotiable</div>')
+    +'<div class="dm"><span>&#128205; '+a.r+'</span><span>&#128193; '+cl(a.c)+'</span><span>&#128336; '+ta(a.dy)+'</span><span>&#128065; '+(Math.floor(Math.random()*400)+50)+' views</span></div>'
+    +'<h3 style="margin-bottom:8px">Description</h3>'
+    +'<p style="font-size:14px;line-height:1.8;color:#4a3a20">'+a.d+'</p>'
+    +'</div></div></div>'
+    +'<div><div class="sb2">'
+    +'<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid #f0e8d8">'
+    +'<div class="sav">'+a.n[0]+'</div>'
+    +'<div><p style="font-weight:700;font-size:14px">'+a.n+'</p><p style="font-size:12px;color:#1a5c1a">&#128737; Verified Seller</p></div>'
+    +'</div>'
+    +'<button class="btn bg bfull" style="padding:13px;margin-bottom:10px" id="showPhBtn">&#128222; Show Phone Number</button>'
+    +'<a href="https://wa.me/'+a.ph.replace(/\D/g,'')+'?text=Hi+I+saw+your+ad+on+EthioHub+Is+it+still+available" target="_blank" style="display:block;text-decoration:none;margin-bottom:10px" id="waLink">'
+    +'<button class="btn bo bfull" style="padding:11px;color:#16a34a;border-color:#16a34a" id="waBtn">&#128172; WhatsApp Seller</button></a>'
+    +'<div class="stip"><strong>&#128737; Safety Tips</strong><ul><li>Meet in a public place</li><li>Do not send money upfront</li><li>Verify item before paying</li></ul></div>'
+    +'</div>'
+    +'<div style="background:#fffbf0;border:1.5px solid #f0e4c0;border-radius:14px;padding:16px;text-align:center;margin-top:12px">'
+    +'<div style="font-size:24px;margin-bottom:6px">&#9889;</div>'
+    +'<p style="font-weight:700;font-size:13px;margin-bottom:4px">Boost this ad</p>'
+    +'<p style="font-size:12px;color:#7a5c2a;margin-bottom:12px">Get 10x more visibility from 99 ETB</p>'
+    +'<button class="btn bd bfull" style="padding:10px" id="detBoostBtn">&#9889; Boost Now</button>'
+    +'</div></div></div>';
+  gp('detail');
+  var spb=G('showPhBtn');
+  if(spb)spb.onclick=function(){
+    if(!isLoggedIn){
+      // Not signed in — show a prompt inside the button area
+      this.innerHTML='&#128274; Sign in to view phone number';
+      this.style.background='#7a5c2a';
+      this.style.fontSize='13px';
+      var self=this;
+      // Show login modal after short delay so user sees the message
+      setTimeout(function(){
+        G('loginModal').classList.add('on');
+        // After login, restore button so they can tap again
+        self.innerHTML='&#128222; Show Phone Number';
+        self.style.background='';
+        self.style.fontSize='';
+      },700);
+      return;
+    }
+    // Logged in — reveal phone
+    this.textContent='&#128222; '+a.ph;
+    this.style.background='#145014';
+    toast('Phone number revealed!');
+  };  var wab=G('waBtn');
+  if(wab)wab.onclick=function(e){
+    if(!isLoggedIn){
+      e.preventDefault();
+      toast('&#128274; Please sign in to contact sellers','#7a5c2a');
+      setTimeout(function(){G('loginModal').classList.add('on');},600);
+      return false;
+    }
+  };
+  if(dbb)dbb.onclick=function(){ob(a.t);};
+}
+function bcp(){
+  var g=G('catPicker');if(!g)return;
+  g.innerHTML=CATS.map(function(c){
+    return '<div class="cpi" data-cid="'+c.id+'"><div class="em">'+c.e+'</div><div class="nm">'+c.l+'</div></div>';
+  }).join('');
+  g.addEventListener('click',function(e){
+    var item=e.target.closest('.cpi');
+    if(!item)return;
+    sc=item.getAttribute('data-cid');
+    g.querySelectorAll('.cpi').forEach(function(el){el.classList.remove('on');});
+    item.classList.add('on');
+    swe('');
+  });
+}
+function lz(){
+  var r=G('adReg').value,zr=G('zoneRow'),az=G('adZone');
+  if(r&&LOCS[r]){
+    az.innerHTML='<option value="">&#8212; Select Zone &#8212;</option>'+LOCS[r].map(function(z){return'<option>'+z+'</option>';}).join('');
+    zr.style.display='block';
+  }else{zr.style.display='none';}
+}
+function ppho(e){
+  var files=Array.from(e.target.files);
+  if(ph.length+files.length>8){toast('Maximum 8 photos allowed','#C8102E');return;}
+  files.forEach(function(f){var r=new FileReader();r.onload=function(ev){ph.push(ev.target.result);upg();};r.readAsDataURL(f);});
+}
+function upg(){
+  var g=G('photoGrid');
+  g.innerHTML=ph.map(function(src,i){
+    return '<div class="ptb"><img src="'+src+'" alt="photo"/>'
+      +(i===0?'<div style="position:absolute;bottom:0;left:0;right:0;text-align:center;font-size:9px;background:rgba(0,0,0,0.6);color:#fff;padding:2px">Cover</div>':'')
+      +'<button class="pdl" data-idx="'+i+'">&#10005;</button></div>';
+  }).join('');
+  G('photoCnt').textContent=ph.length+'/8 photos';
+  g.querySelectorAll('.pdl').forEach(function(btn){
+    btn.onclick=function(e){e.stopPropagation();ph.splice(parseInt(this.getAttribute('data-idx')),1);upg();};
+  });
+}
+function usp(s){
+  for(var i=1;i<=6;i++){var el=G('sp'+i);if(!el)continue;el.className='sp '+(i<s?'dn':i===s?'ac':'pn');}
+}
+function swe(msg){var e=G('wizErr');if(e){e.textContent=msg?'&#9888;&#65039; '+msg:'';e.style.display=msg?'block':'none';}}
+function vs(s){
+  if(s===1&&!sc)return'Please select a category.';
+  if(s===2&&!G('adReg').value)return'Please select at least a region.';
+  if(s===3){
+    var t=G('adTit').value.trim(),d=G('adDes').value.trim();
+    if(!t||t.length<5)return'Title must be at least 5 characters.';
+    if(!d||d.length<20)return'Description must be at least 20 characters.';
+  }
+  if(s===5){
+    var p=G('adPho').value.trim().replace(/\s/g,'');
+    if(!p)return'Please enter your Ethiopian phone number.';
+    if(!/^(\+251[79]\d{8}|0[79]\d{8})$/.test(p))return'Valid Ethiopian phone: 09XXXXXXXX or +251XXXXXXXXX';
+  }
+  return null;
+}
+function wfwd(){
+  var err=vs(ws);if(err){swe(err);return;}swe('');
+  G('ws'+ws).style.display='none';ws++;
+  G('ws'+ws).style.display='block';
+  G('prevBtn').style.display=ws>1?'block':'none';
+  G('nextBtn').style.display=ws<6?'block':'none';
+  if(ws===6)bpv();
+  usp(ws);window.scrollTo({top:200,behavior:'smooth'});
+}
+function wbk(){
+  if(ws===1)return;swe('');
+  G('ws'+ws).style.display='none';ws--;
+  G('ws'+ws).style.display='block';
+  G('prevBtn').style.display=ws>1?'block':'none';
+  G('nextBtn').style.display='block';
+  usp(ws);
+}
+function bpv(){
+  var t=G('adTit').value,d=G('adDes').value,pr=G('adPri').value,cu=G('adCur').value;
+  var rg=G('adReg').value,zo=G('adZone').value,phn=G('adPho').value,nm=G('adNam').value;
+  var cat=CATS.find(function(c){return c.id===sc;});
+  G('adPreview').innerHTML=
+    (ph[0]?'<img src="'+ph[0]+'" style="width:100%;height:150px;object-fit:cover;border-radius:10px;margin-bottom:12px" alt="pv"/>':'<div style="height:90px;background:#e8dcc8;border-radius:10px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;font-size:36px">'+(cat?cat.e:'&#128203;')+'</div>')
+    +'<h3 style="font-size:1rem;font-weight:700;margin-bottom:6px">'+t+'</h3>'
+    +(pr?'<p style="font-size:1.05rem;font-weight:700;color:#1a5c1a;margin-bottom:6px">'+cu+' '+Number(pr).toLocaleString()+'</p>':'')
+    +'<p style="font-size:13px;color:#7a5c2a;line-height:1.6;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">'+d+'</p>'
+    +'<div style="display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:#7a5c2a;padding-top:10px;border-top:1px solid #e8dcc8">'
+    +'<span>&#128193; '+(cat?cat.l:sc)+'</span><span>&#128205; '+([zo,rg].filter(Boolean).join(', '))+'</span><span>&#128222; '+phn+'</span>'
+    +(ph.length?'<span>&#128247; '+ph.length+' photos</span>':'')+'</div>';
+}
+function pubAd(){
+  var btn=G('publishBtn');btn.textContent='&#9203; Publishing...';btn.disabled=true;
+  setTimeout(function(){
+    var na={id:Date.now(),t:G('adTit').value,c:sc,r:G('adReg').value||'Ethiopia',p:Number(G('adPri').value)||null,u:G('adCur').value,d:G('adDes').value,ph:G('adPho').value,n:G('adNam').value||'Anonymous',f:0,b:0,dy:0,e:(CATS.find(function(c){return c.id===sc;})||{e:'&#128203;'}).e};
+    aa.unshift(na);rh();
+    ws=1;sc=null;ph=[];
+    for(var i=1;i<=6;i++){var el=G('ws'+i);if(el)el.style.display=i===1?'block':'none';}
+    G('prevBtn').style.display='none';G('nextBtn').style.display='block';
+    G('catPicker').querySelectorAll('.cpi').forEach(function(el){el.classList.remove('on');});
+    usp(1);swe('');
+    ['adTit','adDes','adPri','adPho','adNam','adEml','adKeb'].forEach(function(id){var el=G(id);if(el)el.value='';});
+    G('adReg').value='';G('adZone').innerHTML='<option>&#8212;</option>';
+    G('zoneRow').style.display='none';G('photoGrid').innerHTML='';G('photoCnt').textContent='0/8 photos';
+    btn.textContent='&#128640; Publish Ad Now';btn.disabled=false;
+    toast('&#127881; Your ad has been published!');setTimeout(function(){gp('home');},800);
+  },1500);
+}
+function ob(title){
+  G('boostTitle').textContent=title||'Boost your ad for more visibility';
+  for(var i=1;i<=5;i++){var el=G('bs'+i);if(el)el.style.display=i===1?'block':'none';}
+  smt=null;document.querySelectorAll('.pm').forEach(function(el){el.classList.remove('on');});
+  G('boostModal').classList.add('on');
+}
+function bpi(){
+  var pl=PLANS[spl];
+  var ins={
+    telebirr:{l:'&#128241; TeleBirr',a:pl.etb+' ETB',s:['Open your TeleBirr app','Select Send Money','Enter number: 0915346985','Enter amount: '+pl.etb+' ETB','Complete the payment','COPY the transaction confirmation code','Paste the code in the next step to verify']},
+    ebirr:{l:'&#128179; eBirr',a:pl.etb+' ETB',s:['Open eBirr app','Select Transfer','Enter number: 0915346985','Enter amount: '+pl.etb+' ETB','Complete the payment','Copy the confirmation code','Paste the code in the next step']},
+    mpesa:{l:'&#127472;&#127466; M-Pesa',a:pl.kes+' KES',s:['Open M-Pesa on your Safaricom phone','Go to Lipa na M-Pesa then Buy Goods and Services','Enter Till Number: <strong style="font-size:16px;color:#1a5c1a">4345510</strong>','Enter amount: '+pl.kes+' KES','Enter your M-Pesa PIN','Copy the M-Pesa transaction code','Paste the code in the next step']},
+    usdt:{l:'&#8366; USDT BEP-20',a:pl.usdt+' USDT',s:['Open Binance or Trust Wallet','Select Send then USDT','Choose BNB Smart Chain BEP-20 network','WARNING: Do NOT use ERC-20','Send amount: '+pl.usdt+' USDT','Copy the Transaction Hash TxID','Paste the TxID in the next step']}
+  };
+  var m=ins[smt];
+  var ar=smt==='usdt'?'<div class="pcb"><code style="font-size:11px;word-break:break-all;flex:1">0xe732799e25d518ddcb9a3e5ebc8b6762ce757bb9</code><button class="cpb" id="copyAddr">Copy</button></div>':'';
+  G('payInst').innerHTML='<div class="pi">'
+    +'<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><div><p style="font-weight:700;font-size:14px">'+m.l+'</p><p style="font-size:12px;color:#7a5c2a">'+pl.n+' '+pl.d+' days</p></div><p style="font-weight:800;font-size:18px;color:#D4A017">'+m.a+'</p></div>'
+    +ar
+    +'<p style="font-size:11px;font-weight:700;color:#4a3a20;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Steps:</p>'
+    +m.s.map(function(s,i){return'<div class="ps"><span class="pn">'+(i+1)+'</span><p style="font-size:13px;color:#4a3a20;line-height:1.5">'+s+'</p></div>';}).join('')
+    +'</div>';
+  var ca=G('copyAddr');
+  if(ca)ca.onclick=function(){
+    if(navigator.clipboard)navigator.clipboard.writeText('0xe732799e25d518ddcb9a3e5ebc8b6762ce757bb9').then(function(){ca.textContent='Copied!';});
+    else{var ta=document.createElement('textarea');ta.value='0xe732799e25d518ddcb9a3e5ebc8b6762ce757bb9';document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);ca.textContent='Copied!';}
+  };
+}
+window.onload=function(){
+  dk=localStorage.getItem('eh-dk')==='1';
+  if(dk){document.body.style.background='#0f0a05';document.body.style.color='#f5e8d0';G('darkBtn').textContent='&#9728;';}
+  bcp();rh();rb();
+  // NAV buttons
+  G('logoBtn').onclick=function(){gp('home');};
+  G('searchBtn').onclick=function(){gp('browse');};
+  G('postBtn').onclick=function(){gp('post');};
+  G('menuBtn').onclick=function(){var m=G('mobMenu');m.style.display=m.style.display==='block'?'none':'block';};
+  G('darkBtn').onclick=function(){dk=!dk;document.body.style.background=dk?'#0f0a05':'#FFF8EB';document.body.style.color=dk?'#f5e8d0':'#1a0e00';G('darkBtn').textContent=dk?'&#9728;':'&#127769;';localStorage.setItem('eh-dk',dk?'1':'0');};
+  G('signinBtn').onclick=function(){G('loginModal').classList.add('on');};
+  if(G('signinBtn2'))G('signinBtn2').onclick=function(){G('mobMenu').style.display='none';G('loginModal').classList.add('on');};
+  if(G('regBtn2'))G('regBtn2').onclick=function(){G('mobMenu').style.display='none';G('regModal').classList.add('on');};
+  // Hero buttons
+  G('heroPostBtn').onclick=function(){gp('post');};
+  G('heroBrowseBtn').onclick=function(){gp('browse');};
+  G('heroSearchBtn').onclick=function(){
+    var q=G('hq').value,r=G('hr').value;
+    gp('browse');
+    setTimeout(function(){if(q)G('bq').value=q;if(r)G('breg').value=r;rb();},50);
+  };
+  G('viewAllBtn').onclick=function(){gp('browse');};
+  G('featAllBtn').onclick=function(){gp('browse');};
+  G('allJobsBtn').onclick=function(){gp('browse');setTimeout(function(){G('bcat').value='jobs';rb();},50);};
+  G('latestAllBtn').onclick=function(){gp('browse');};
+  G('ctaPostBtn').onclick=function(){gp('post');};
+  // Category cards
+  document.querySelectorAll('.cc').forEach(function(el){
+    el.onclick=function(){var cat=this.getAttribute('data-cat');gp('browse');setTimeout(function(){G('bcat').value=cat;rb();},50);};
+  });
+  // Category nav links
+  document.querySelectorAll('.cl[data-cat]').forEach(function(el){
+    el.onclick=function(){var cat=this.getAttribute('data-cat');G('mobMenu').style.display='none';gp('browse');setTimeout(function(){G('bcat').value=cat;rb();},50);};
+  });
+  // Footer links
+  document.querySelectorAll('.fl2[data-cat]').forEach(function(el){
+    el.onclick=function(){var cat=this.getAttribute('data-cat');gp('browse');setTimeout(function(){G('bcat').value=cat;rb();},50);};
+  });
+  // Region tags
+  document.querySelectorAll('.rtag[data-reg]').forEach(function(el){
+    el.onclick=function(){var reg=this.getAttribute('data-reg');gp('browse');setTimeout(function(){G('breg').value=reg;rb();},50);};
+  });
+  // Footer account links
+  if(G('footReg'))G('footReg').onclick=function(){G('regModal').classList.add('on');};
+  if(G('footLogin'))G('footLogin').onclick=function(){G('loginModal').classList.add('on');};
+  if(G('footPost'))G('footPost').onclick=function(){gp('post');};
+  if(G('footBoost'))G('footBoost').onclick=function(){ob('');};
+  // Ad cards delegation
+  document.addEventListener('click',function(e){
+    var ac2=e.target.closest('.ac');if(ac2){sd(parseInt(ac2.getAttribute('data-id')));return;}
+    var jc2=e.target.closest('.jc');if(jc2){sd(parseInt(jc2.getAttribute('data-id')));return;}
+    if(e.target.classList&&e.target.classList.contains('mw')&&e.target.classList.contains('on'))e.target.classList.remove('on');
+  });
+  // Browse
+  G('bq').addEventListener('input',rb);
+  G('bcat').addEventListener('change',rb);
+  G('breg').addEventListener('change',rb);
+  G('clearBtn').onclick=function(){G('bq').value='';G('bcat').value='';G('breg').value='';rb();};
+  G('clearBtn2').onclick=function(){G('bq').value='';G('bcat').value='';G('breg').value='';rb();};
+  G('browsePostBtn').onclick=function(){gp('post');};
+  // Back button
+  G('backBtn').onclick=function(){gp(pp==='detail'?'browse':pp);};
+  // Wizard
+  G('nextBtn').onclick=wfwd;
+  G('prevBtn').onclick=wbk;
+  G('adReg').addEventListener('change',lz);
+  G('photoDrop').onclick=function(){G('photoInp').click();};
+  G('photoInp').addEventListener('change',ppho);
+  G('publishBtn').onclick=pubAd;
+  // Modals
+  G('closeLogin').onclick=function(){G('loginModal').classList.remove('on');};
+  G('closeReg').onclick=function(){G('regModal').classList.remove('on');};
+  G('closeBoost').onclick=function(){G('boostModal').classList.remove('on');};
+  G('toRegister').onclick=function(){G('loginModal').classList.remove('on');G('regModal').classList.add('on');};
+  G('toLogin').onclick=function(){G('regModal').classList.remove('on');G('loginModal').classList.add('on');};
+  G('loginSubmit').onclick=function(){
+    var e=G('liEmail').value,p=G('liPass').value;
+    if(!e||!p){toast('Please fill in all fields','#C8102E');return;}
+    isLoggedIn=true;
+    // Update navbar sign in button to show logged in state
+    var sib=G('signinBtn');
+    if(sib){sib.textContent='&#9989; Signed In';sib.style.background='#e8f5e8';sib.style.color='#1a5c1a';sib.style.borderColor='#1a5c1a';}
+    G('loginModal').classList.remove('on');
+    toast('Welcome back! Signed in successfully');
+  };
+  G('regSubmit').onclick=function(){
+    var n=G('rgName').value,e=G('rgEmail').value,p=G('rgPhone').value.replace(/\s/g,''),pw=G('rgPass').value;
+    if(!n||!e||!p||!pw){toast('Please fill in all fields','#C8102E');return;}
+    if(!/^(\+251[79]\d{8}|0[79]\d{8})$/.test(p)){toast('Enter a valid Ethiopian phone number','#C8102E');return;}
+    if(pw.length<8){toast('Password must be at least 8 characters','#C8102E');return;}
+    isLoggedIn=true;
+    // Update navbar
+    var sib=G('signinBtn');
+    if(sib){sib.textContent='&#9989; '+n.split(' ')[0];sib.style.background='#e8f5e8';sib.style.color='#1a5c1a';sib.style.borderColor='#1a5c1a';}
+    G('regModal').classList.remove('on');
+    toast('Account created! Welcome to EthioHub Africa!');
+  };
+  // Boost
+  document.querySelectorAll('.bp').forEach(function(el){
+    el.onclick=function(){spl=this.id==='planBasic'?'basic':this.id==='planFeat'?'featured':'premium';document.querySelectorAll('.bp').forEach(function(e){e.classList.remove('on');});this.classList.add('on');};
+  });
+  document.querySelectorAll('.pm').forEach(function(el){
+    el.onclick=function(){smt=this.id==='pmTel'?'telebirr':this.id==='pmEbi'?'ebirr':this.id==='pmMpe'?'mpesa':'usdt';document.querySelectorAll('.pm').forEach(function(e){e.classList.remove('on');});this.classList.add('on');};
+  });
+  G('boostNext1').onclick=function(){G('bs1').style.display='none';G('bs2').style.display='block';};
+  G('boostBack2').onclick=function(){G('bs2').style.display='none';G('bs1').style.display='block';};
+  G('boostNext2').onclick=function(){
+    if(!smt){toast('Please select a payment method','#C8102E');return;}
+    G('bs2').style.display='none';G('bs3').style.display='block';bpi();
+  };
+  G('boostBack3').onclick=function(){G('bs3').style.display='none';G('bs2').style.display='block';};
+  G('boostNext3').onclick=function(){
+    G('bs3').style.display='none';G('bs4').style.display='block';
+    var lb={telebirr:'TeleBirr Confirmation Code',ebirr:'eBirr Confirmation Code',mpesa:'M-Pesa Transaction Code',usdt:'Transaction Hash TxID'};
+    G('txLbl').textContent=lb[smt]||'Transaction Reference';
+    var ph2={telebirr:'TLB20241234XXXX',ebirr:'EBR20241234XXXX',mpesa:'QAX3D2K9X',usdt:'0x1234abcd...'};
+    G('txRef').placeholder=ph2[smt]||'Paste your code here';
+    G('txErr').style.display='none';
+  };
+  G('boostBack4').onclick=function(){G('bs4').style.display='none';G('bs3').style.display='block';};
+  G('verifyBtn').onclick=function(){
+    var ref=G('txRef').value.trim(),ee=G('txErr');
+    if(!ref||ref.length<6){ee.textContent='Please enter a valid transaction reference at least 6 characters.';ee.style.display='block';return;}
+    ee.style.display='none';
+    var btn=G('verifyBtn');btn.textContent='Verifying...';btn.disabled=true;
+    setTimeout(function(){G('bs4').style.display='none';G('bs5').style.dis
